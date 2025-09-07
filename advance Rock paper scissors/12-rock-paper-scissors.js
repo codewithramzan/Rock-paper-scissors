@@ -17,7 +17,7 @@
         if (!isAutoPlaying) {
            intervalId = setInterval(() => {
           const playerMove = pickComputerMove();
-          makeMove(playerMove);
+          playGame(playerMove);
         }, 1000);
         isAutoPlaying = true;
         } else {
@@ -73,8 +73,8 @@
         const movesElement = document.querySelector('.js-moves-chosen');
         movesElement.innerHTML = `
           You
-          <img src="images/${playerMove}-emoji.png" class="move-icon">
-          <img src="images/${computerMove}-emoji.png" class="move-icon">
+          <img src="../images/${playerMove}-emoji.png" class="move-icon">
+          <img src="../images/${computerMove}-emoji.png" class="move-icon">
           Computer
         `;
 
